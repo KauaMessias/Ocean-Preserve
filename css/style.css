@@ -6,7 +6,9 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     
+    
 }
+p{ font-size: 1.2rem; }
 
 html {
     scroll-behavior: smooth;
@@ -78,7 +80,7 @@ a {
 }
 
 .main-text {
-    padding: 5rem 0 1rem;
+    padding: 0rem 0 1rem;
      
 }
 
@@ -160,19 +162,19 @@ i {
 }
 
 #sobre div p {
-    font-size: 1.2rem;
+    
     text-align: justify;
 }
 
 #projetos p {
     margin-top: 20px;
-    font-size: 1.2rem;
+    
     text-align: justify;
     margin-bottom: 60px;
 }
 #projetos2 p {
     margin-top: 20px;
-    font-size: 1.2rem;
+    
     text-align: justify;
     margin-bottom: 60px;
     font-size: larger;
@@ -214,9 +216,7 @@ i {
 #apoie form div {
     text-align: left;
 }
-.formulario{
-   
-}
+
 
 input {
     height: 30px;
@@ -228,6 +228,18 @@ input {
 }
 
 @media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1rem 0.5rem;
+        justify-content: space-between;
+
+    }
+    
+    
+    .navigation {
+        display: none;
+    }
     .container {
         width: 90%;
     }
@@ -240,23 +252,17 @@ input {
         font-size: 2rem;
     }
 
-    .main-text p {
-        font-size: 14px;
-        width: 450px;
-    }
 
-    .main-img img {
-        position: absolute;
-        mix-blend-mode: multiply;
-        top: 20%;
-        right: 9%;
-        width: 400px;
+    #sobre {
+        margin-top: 16vh;
+        
     }
 
     #sobre div {
         display: flex;
         flex-direction: column;
         align-items: center;
+    
         margin-top: 20px;
         margin-bottom: 60px;
     }
@@ -279,7 +285,7 @@ input {
         font-size: large;
     }
     .btn-scroll {
-        margin-bottom: 250px;
+        display: none;
     }
     .logo{
         width: 100%;
@@ -287,24 +293,6 @@ input {
     .navigation{
         
     }
-}
-
-@media screen and (max-width: 768px) {
-    *{
-        font-size: small;
-    }
-    .navigation {
-        display: none;
-    }
-
-    header {
-        display: flex;
-        width: 100%;
-        height: 55px;
-        justify-content: center;
-
-    }
-
     #apoie form {
         display: flex;
         width: auto;
@@ -318,6 +306,7 @@ input {
         margin: 0 auto;
         flex-direction: column;
         width: 80%;
+        
     }
     body{
         display: flex;
@@ -329,55 +318,60 @@ input {
         width: 100%;
         flex-direction: column;
         text-align: justify;
-        
         grid-template-columns: 1fr;
+        
 
          
     }
-    .video {
+    .video{
         width: 100%;
-        
+        height: 100%;
         margin: 0 auto;
         
     }
-    
-    .main-text h4 {
-        font-weight: 500;
-        
-    }
-    
+       
     .main-text h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        font-weight: 900;
+        font-size: 2.2rem;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .btn-scroll{
+        display: none;
     }
     
     .main-text p {
         display: flex;
         width: 100%;
-        font-size: 1.2rem;
-        
-        
-        
+        margin-bottom: 20px;   
     }
-    .cta{
-        width: 100%;
-        margin-top: 15px;
-       }
+    
        .video1{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+       
+        width: 100%;
         margin-top: 20px;
         margin-bottom: 60px;
         height: auto;
     }
-    .btn{
-        display: none;
+
+    .wrapper{
+
     }
-    .video1{
-        margin: 0 auto;
+       }
+        
+    
+
+
+@media screen and (max-width: 768px) {
+
+    p{
+      font-size: medium;
     }
+
+   .cta{
+    font-size: x-small;
+   }
+    
+    
        }
     
        
@@ -388,38 +382,39 @@ input {
     color:red
 }
 
-.video{ 
-    height: 80%;
-    width: 80%;
-   
-    box-shadow: 0px 0px 15px rgb(34, 34, 34);
-    
-  }
+
+
   .principal{
       display: flex;
+      width: 80%;
       margin: 0 auto;
       margin-top: 65px;
       align-items: flex-end;
+      justify-content: space-between;
   
   }
   .video{ 
-    margin-right: 20px;
-    max-height: 400px;
-    object-fit: cover;
     
+    max-width: 710px;
+    max-height: 400px;
     box-shadow: 0px 0px 20px rgb(27, 27, 27);
-   
+   margin: 0 auto;
   }
-  .video1{
-     
-  }
+
 .texto1{
     margin-right: 20px;
 }
+.video1{
+    display: flex;
+    width: 100%;
+
+}
+
 .cta{
  width: 80%;
- margin-top: 30px;
+ margin-top: 4vh;
 }
+
 .navigation-mobile{
   background-color: #0000006e;
   position: absolute;
@@ -429,4 +424,7 @@ input {
   height: 100vh;
   backdrop-filter: blur(10px);
   display: none;
+}
+.menu{
+    display: none;
 }

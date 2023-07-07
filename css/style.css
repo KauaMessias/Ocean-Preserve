@@ -352,12 +352,9 @@ input {
         margin-bottom: 60px;
         height: auto;
     }
+    
 
-    .wrapper{
-
-    }
-       }
-        
+}     
     
 
 
@@ -366,11 +363,12 @@ input {
     p{
       font-size: medium;
     }
-
-   .cta{
-    font-size: x-small;
-   }
     
+   .cta{
+    font-size: xx-small;
+   }
+   
+   
     
        }
     

@@ -255,6 +255,7 @@ display: none;
     header{
         box-sizing: border-box;
         height: 70px;
+        width: 100%;
         padding: 1rem;
         display: flex;
         align-items: center;
@@ -263,10 +264,6 @@ display: none;
     
     .wrapper{
         display: none;
-    }
-
-    #btn-mobile{
-        display: block;
     }
     a:hover{
         background: #273b6dc5;
@@ -314,6 +311,39 @@ display: none;
      height: calc(100vh - 64px);
      visibility: visible;
      overflow-y: auto;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #menuMobile{
+       
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #menuMobile::after, #menuMobile::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+    }
+    #navigation.active #menuMobile{
+        border-top-color: transparent;
+    }
+    #navigation.active #menuMobile::before{
+      transform: rotate(45deg);
+    }
+    #navigation.active #menuMobile::after{
+        transform: rotate(-45deg);
+
     }
    
     .navigation {

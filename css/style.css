@@ -251,6 +251,7 @@ input {
 #btn-mobile{
 display: none;
 }
+
 @media screen and (max-width: 1024px) {
     header{
         box-sizing: border-box;

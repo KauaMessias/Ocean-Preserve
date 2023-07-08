@@ -29,10 +29,10 @@
         </div>
         
         <nav id="navigation">
-            <button id="btn-mobile" aria-expanded="false">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                  <span id="menuMobile"></span>
                 </button>
-            <ul id="menu">
+            <ul id="menu" role="menu">
                 <li><a class="navigation1" href="#">Home</a></li>
                 <li><a class="navigation1" href="#sobre">Sobre</a></li>
                 <li><a class="navigation1" href="#projetos">Projetos</a></li>
@@ -49,14 +49,20 @@
             const btnMobile = document.getElementById('btn-mobile');
             function toggleMenu(event) {
                 if (event.type === 'touchstart') event.preventDefault();
-                const navigation = document.getElementById('navigation');
-                navigation.classList.toggle('active');
-                const active = navigation.classList.contains('active');
-                event.currentTarget.setAttribute('aria-expanded', 'true');
+                const nav = document.getElementById('navigation');
+                nav.classList.toggle('active');
+                const active = nav.classList.contains('active');
+                event.currentTarget.setAttribute('aria-expanded', active);
+                if (active){ event.currentTarget.setAttribute('arial-label', 'Fechar Menu');
+
+            }else{
+                event.currentTarget.setAttribute('arial-label', 'Abrir Menu');
             }
+        }
             btnMobile.addEventListener('click', toggleMenu);
             btnMobile.addEventListener('touchstart', toggleMenu);
             </script>
+
     </header>
 
     <main class="container">

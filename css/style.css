@@ -322,7 +322,7 @@ display: none;
         gap: .5rem;
     }
     #menuMobile{
-       
+        color: #FFF;
         border-top: 2px solid;
         width: 20px;
     }
@@ -334,15 +334,17 @@ display: none;
         background: currentColor;
         margin-top: 5px;
         transition: .3s;
+        position: relative;
     }
     #navigation.active #menuMobile{
         border-top-color: transparent;
     }
     #navigation.active #menuMobile::before{
-      transform: rotate(45deg);
+      transform: rotate(135deg);
     }
     #navigation.active #menuMobile::after{
-        transform: rotate(-45deg);
+        transform: rotate(-135deg);
+        top: -7px;
 
     }
    

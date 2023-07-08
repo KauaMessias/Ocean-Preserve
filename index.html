@@ -29,6 +29,9 @@
         </div>
         
         <nav id="navigation">
+            <button id="btn-mobile" aria-expanded="false">
+                 <span id="menuMobile"></span>
+                </button>
             <ul id="menu">
                 <li><a class="navigation1" href="#">Home</a></li>
                 <li><a class="navigation1" href="#sobre">Sobre</a></li>
@@ -42,18 +45,19 @@
             <a href="index2.html"><button class="btn">Fonte</button></a>
         </div>
         
-        <button id="btn-mobile"> <span id="menuMobile"></span></button>
         <script>
-
             const btnMobile = document.getElementById('btn-mobile');
-            function toggleMenu() {
-                const nav = document.getElementById('navigation');
-                nav.classList.toggle('active');
+            function toggleMenu(event) {
+                if (event.type === 'touchstart') event.preventDefault();
+                const navigation = document.getElementById('navigation');
+                navigation.classList.toggle('active');
+                const active = navigation.classList.contains('active');
+                event.currentTarget.setAttribute('aria-expanded', 'true');
             }
-
-            btnMobile.addEventListener('click', toggleMenu);</script>
+            btnMobile.addEventListener('click', toggleMenu);
+            btnMobile.addEventListener('touchstart', toggleMenu);
+            </script>
     </header>
-
 
     <main class="container">
 

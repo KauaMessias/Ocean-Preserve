@@ -43,7 +43,7 @@ body {
 
 header {
     display: flex;
-    flex-wrap: wrap;
+    box-sizing: border-box;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -270,36 +270,56 @@ input {
  margin-top: 4vh;
 }
 
-.navigation-mobile{
-  background-color: #0000006e;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(10px);
-  display: none;
-}
-
 
 @media screen and (max-width: 1024px) {
-    header {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 1rem 0.5rem;
-        justify-content: space-between;
-
+    
+    .wrapper{
+        display: none;
     }
 
     #btn-mobile{
         display: block;
     }
-    #menu{
-        display: none;
+    a:hover{
+        background: rgb(0, 0, 0);
     }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        gap: 0px;
+    }
+    #menu a{
+        font-family: sans-serif;
+        padding:.5rem;
+        align-items: center;
+        
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 64px; 
+        right: 0px;
+        background: #1e2d53;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        
+        visibility: hidden;
+          
+        overflow-y: hidden;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgb(37, 37, 37);
+    }
+    
 
     #navigation.active #menu{
-     display: flex;
+     height: calc(100vh - 64px);
+     visibility: visible;
+     overflow-y: auto;
     }
    
     

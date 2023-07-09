@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylejogo.css">
+    <title>Surf Bros</title>
+</head>
+<body>
+    <div class="game-over"></div>
+    <div class="game-board" id="board">
+        <div class="info">
+            <p>Score: <span id="score">0</span></p>
+            <p>Life: <span id="life">5</span</p>
+        </div>
+        <div id="mark"></div>
+        <div style="display: none" id="gameOver">
+            <span>GAME OVER</span>
+            <button onclick="location.reload()">Jogar Novamente</button>
+        </div>
+
+        <img src="./assetsJogo/lixeira.png" alt="lixeira" class="lixeira">
+        <img src="./assetsJogo/paper.png" alt="paper" class="paper" id="paper">
+        <img src="./assetsJogo/apple.png" alt="apple" class="apple" id="apple">
+        <img src="./assetsJogo/bottle.png" alt="bottle" class="bottle" id="bottle">
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

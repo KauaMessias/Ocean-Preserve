@@ -102,6 +102,7 @@ const questions = [
     quizContainer.innerHTML = `
       <h1>Você completou o quiz!</h1>
       <p>Sua pontuação: ${score}/${questions.length}</p>
+      <a class="voltar" href="https://kauamessias.github.io/Ocean-Preserve/">Voltar para a pagina inicial</a>
     `;
     
   }

@@ -104,6 +104,10 @@ h1 {
 #submit-btn:hover {
   background-color: #e0e0e0;
 }
+.voltar{
+  color: #fff;
+  text-decoration: none;
+}
 @media  screen and (max-width: 1030px)  {
   #quiz-container{
     

@@ -47,7 +47,8 @@ header {
     padding: 1rem 3rem;
     justify-content: space-between;
     background: #1e2d53;
-    
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -123,7 +124,9 @@ a {
 .btn:hover{
     background-color: #091432;
 }
-
+.bx{
+    padding: 10px;
+}
 .btn-scroll {
     display: flex;
     align-items: center;
@@ -133,7 +136,7 @@ a {
     width: 50px;
     height: 50px;
     border-radius: 999px;
-    margin: 100px auto 150px;
+    margin: 90px auto 0px;
     cursor: pointer;
 }
 
@@ -141,9 +144,13 @@ i {
     color: #FFF;
 }
 
-#sobre, #projetos, .principal {
-    padding: 0 9%;
+#sobre, #projetos{
+    padding: 60px 9% 0;
     margin-top: 25px;   
+}
+.principal {
+    padding: 0 9%;
+    margin-top: 0px;
 }
 
 #sobre h2, #projetos h2 {
@@ -400,9 +407,6 @@ display: none;
     }
     .logo{
         width: 100%;
-    }
-    .navigation{
-        
     }
     #apoie form {
         display: flex;

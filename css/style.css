@@ -254,6 +254,7 @@ input {
 #menu a{
     display: flex;
     gap: .5rem;
+    padding: .75rem;
 }
 #btn-mobile{
 display: none;

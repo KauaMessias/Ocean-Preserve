@@ -413,7 +413,7 @@ display: none;
         display: flex;
         width: auto;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         grid-template-columns: 1fr;
         
     }

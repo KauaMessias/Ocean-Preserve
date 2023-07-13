@@ -121,7 +121,6 @@ button {
 #mark {
     width: 100%;
     height: 5px;
-    background-color: red;
     position: absolute;
     bottom: 50px;
 }
@@ -175,3 +174,4 @@ button {
 .eliminado {
     display: none;
 }
+
